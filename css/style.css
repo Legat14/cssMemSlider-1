@@ -6,6 +6,7 @@ body {
   margin: 50px 2.5% 50px 2.5%;
   display: flex;
   background-color: #0c1b5c;
+  overflow: hidden;
 }
 
 .container {
@@ -50,23 +51,17 @@ input {
   transition: margin-left 0.3s ease-in-out;
 }
 
-label {
-  width: 30px;
-  height: 30px;
-  background-color: red;
-}
-
 .img-slider {
   width: var(--img-width);
   height: 697px;
   display: flex;
+  overflow: hidden;
   border: 2px solid #ffffff;
   border-radius: 30px;
 }
 
-.img-slider img {
-  border-radius: 30px;
-}
+/*.img-slider img {
+}*/
 
 .img-slider :first-child {
   margin-left: 0px;
@@ -79,6 +74,69 @@ label {
   margin-top: 5%;
   display: flex;
   justify-content: space-between;
+}
+
+.controls {
+  display: flex;
+}
+
+label {
+  cursor: pointer;
+}
+
+label div {
+  width: 32px;
+  height: 32px;
+}
+
+label div div {
+  width: 25px;
+  height: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff066;
+  border: 1px solid #ffffff;
+  border-radius: 50%;
+  transition: background-color 0.4s;
+}
+
+label div div:hover {
+  background-color: #ffc400;
+  transition: background-color 0.4s;
+}
+
+label div div::after {
+  width: 15px;
+  height: 15px;
+  content: "";
+  display: none;
+  background-color: #0c1b5c;
+  border-radius: 50%;
+}
+
+#button-01:checked ~ .description-and-controls #radio-01::after{
+  display: block;
+}
+
+#button-02:checked ~ .description-and-controls #radio-02::after{
+  display: block;
+}
+
+#button-03:checked ~ .description-and-controls #radio-03::after{
+  display: block;
+}
+
+#button-04:checked ~ .description-and-controls #radio-04::after{
+  display: block;
+}
+
+#button-05:checked ~ .description-and-controls #radio-05::after{
+  display: block;
+}
+
+#button-06:checked ~ .description-and-controls #radio-06::after{
+  display: block;
 }
 
 .description p {
