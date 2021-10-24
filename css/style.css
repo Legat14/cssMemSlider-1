@@ -202,7 +202,7 @@ label div div::after {
   }
 }
 
-@media (max-width: 550px), (max-height: 830px) {
+@media (max-width: 550px), (max-height: 830px), (max-width: 786px) and (max-height: 880px) {
   .container {
     min-width: calc(var(--img-width-380) + 6px);
   }
