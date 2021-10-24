@@ -1,5 +1,7 @@
 :root {
   --img-width: 524px;
+  --strings-height: 30px;
+  /*Для смены надписи*/
 }
 
 body {
@@ -10,7 +12,7 @@ body {
 }
 
 .container {
-  max-width: 524px;
+  min-width: 750px;
   margin: auto;
   display: flex;
   flex-direction: column;
@@ -21,32 +23,32 @@ input {
   display: none;
 }
 
-#button-01:checked ~ .img-slider :first-child {
+#button-01:checked~.img-slider :first-child {
   margin-left: 0px;
   transition: margin-left 0.3s ease-in-out;
 }
 
-#button-02:checked ~ .img-slider :first-child {
+#button-02:checked~.img-slider :first-child {
   margin-left: calc(-1 * var(--img-width));
   transition: margin-left 0.3s ease-in-out;
 }
 
-#button-03:checked ~ .img-slider :first-child {
+#button-03:checked~.img-slider :first-child {
   margin-left: calc(-2 * var(--img-width));
   transition: margin-left 0.3s ease-in-out;
 }
 
-#button-04:checked ~ .img-slider :first-child {
+#button-04:checked~.img-slider :first-child {
   margin-left: calc(-3 * var(--img-width));
   transition: margin-left 0.3s ease-in-out;
 }
 
-#button-05:checked ~ .img-slider :first-child {
+#button-05:checked~.img-slider :first-child {
   margin-left: calc(-4 * var(--img-width));
   transition: margin-left 0.3s ease-in-out;
 }
 
-#button-06:checked ~ .img-slider :first-child {
+#button-06:checked~.img-slider :first-child {
   margin-left: calc(-5 * var(--img-width));
   transition: margin-left 0.3s ease-in-out;
 }
@@ -97,7 +99,7 @@ label div div {
   align-items: center;
   background-color: #fff066;
   border: 1px solid #ffffff;
-  border-radius: 50%;
+  border-radius: 30%;
   transition: background-color 0.4s;
 }
 
@@ -112,37 +114,72 @@ label div div::after {
   content: "";
   display: none;
   background-color: #0c1b5c;
-  border-radius: 50%;
+  border-radius: 40%;
 }
 
-#button-01:checked ~ .description-and-controls #radio-01::after{
+#button-01:checked~.description-and-controls #radio-01::after {
   display: block;
 }
 
-#button-02:checked ~ .description-and-controls #radio-02::after{
+#button-02:checked~.description-and-controls #radio-02::after {
   display: block;
 }
 
-#button-03:checked ~ .description-and-controls #radio-03::after{
+#button-03:checked~.description-and-controls #radio-03::after {
   display: block;
 }
 
-#button-04:checked ~ .description-and-controls #radio-04::after{
+#button-04:checked~.description-and-controls #radio-04::after {
   display: block;
 }
 
-#button-05:checked ~ .description-and-controls #radio-05::after{
+#button-05:checked~.description-and-controls #radio-05::after {
   display: block;
 }
 
-#button-06:checked ~ .description-and-controls #radio-06::after{
+#button-06:checked~.description-and-controls #radio-06::after {
   display: block;
+}
+
+.description {
+  height: 27px;
+  display: flex;
+  flex-direction: column-reverse;
+  overflow: hidden;
+  background-color: #ff0000;
 }
 
 .description p {
+  position: relative;
+  top: 0px;
   margin: 0px;
   font-family: 'Raleway', sans-serif;
   font-weight: 300;
   font-size: 25px;
   color: #ffffff;
+  transition: top 0.2s ease-in-out;
+}
+
+#button-01:checked~.description-and-controls .description p {
+  top: calc(var(--strings-height) * 0);
+}
+
+#button-02:checked~.description-and-controls .description p {
+  top: calc(var(--strings-height) * 1);
+}
+
+#button-03:checked~.description-and-controls .description p {
+  top: calc(var(--strings-height) * 2);
+}
+
+#button-04:checked~.description-and-controls .description p {
+  top: calc(var(--strings-height) * 3);
+}
+
+#button-05:checked~.description-and-controls .description p {
+  top: calc(var(--strings-height) * 4);
+}
+
+#button-06:checked~.description-and-controls .description p {
+  top: calc(var(--strings-height) * 5);
 }
