@@ -12,6 +12,16 @@ body {
   align-items: center;
 }
 
+input {
+  display: none;
+}
+
+label {
+  width: 30px;
+  height: 30px;
+  background-color: red;
+}
+
 .img-slider {
   display: flex;
   border: 2px solid #ffffff;
