@@ -1,7 +1,6 @@
 :root {
   --img-width: 524px;
-  --strings-height: 30px;
-  /*Для смены надписи*/
+  --strings-height: 30px; /*Для смены надписи*/
 }
 
 body {
@@ -75,6 +74,7 @@ input {
   height: 100%;
   margin-top: 5%;
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
 }
 
@@ -87,8 +87,11 @@ label {
 }
 
 label div {
-  width: 32px;
-  height: 32px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 label div div {
@@ -182,4 +185,20 @@ label div div::after {
 
 #button-06:checked~.description-and-controls .description p {
   top: calc(var(--strings-height) * 5);
+}
+
+/* Адаптация */
+
+@media (max-width: 786px) {
+  .container {
+    min-width: calc(var(--img-width) + 6px);
+  }
+
+  .description-and-controls {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+  .description {
+    margin: 20px;
+  }
 }
