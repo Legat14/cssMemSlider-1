@@ -1,6 +1,7 @@
 :root {
-  --img-width: 524px;
-  --strings-height: 30px; /*Для смены надписи*/
+  --img-width: 524px; /* Ширина картинки по-умолчанию */
+  --img-width-380: 380px; /* Ширина картинки на маленьких мониторах */
+  --strings-height: 30px; /* Для смены надписи */
 }
 
 body {
@@ -60,9 +61,6 @@ input {
   border: 2px solid #ffffff;
   border-radius: 30px;
 }
-
-/*.img-slider img {
-}*/
 
 .img-slider :first-child {
   margin-left: 0px;
@@ -198,7 +196,48 @@ label div div::after {
     flex-direction: column-reverse;
     align-items: center;
   }
+
   .description {
     margin: 20px;
+  }
+}
+
+@media (max-width: 550px), (max-height: 830px) {
+  .container {
+    min-width: calc(var(--img-width-380) + 6px);
+  }
+
+  .img-slider {
+    width: 380px;
+    height: 505px;
+  }
+
+  .img-slider img {
+    width: 380px;
+    height: 505px;
+  }
+
+  #button-01:checked~.img-slider :first-child {
+    margin-left: 0px;
+  }
+  
+  #button-02:checked~.img-slider :first-child {
+    margin-left: calc(-1 * var(--img-width-380));
+  }
+  
+  #button-03:checked~.img-slider :first-child {
+    margin-left: calc(-2 * var(--img-width-380));
+  }
+  
+  #button-04:checked~.img-slider :first-child {
+    margin-left: calc(-3 * var(--img-width-380));
+  }
+  
+  #button-05:checked~.img-slider :first-child {
+    margin-left: calc(-4 * var(--img-width-380));
+  }
+  
+  #button-06:checked~.img-slider :first-child {
+    margin-left: calc(-5 * var(--img-width-380));
   }
 }
