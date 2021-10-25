@@ -1,11 +1,12 @@
 :root {
   --img-width: 524px; /* Ширина картинки по-умолчанию */
+  --img-width-480: 480px; /* Ширина картинки на средних мониторах */
   --img-width-380: 380px; /* Ширина картинки на маленьких мониторах */
   --strings-height: 30px; /* Для смены надписи */
 }
 
 body {
-  margin: 50px 2.5% 50px 2.5%;
+  margin: 30px 2.5% 30px 2.5%;
   display: flex;
   background-color: #0c1b5c;
   overflow: hidden;
@@ -17,6 +18,28 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+h1 {
+  padding: 0px 40px;
+  margin: 0px 0px 30px 0px;
+  font-family: 'Raleway', sans-serif;
+  font-size: 30px;
+  color: #ffffff;
+  background-color: #ff0000;
+}
+
+p {
+  margin: 0px;
+  font-family: 'Raleway', sans-serif;
+  font-size: 20px;
+  color: #ffffff;
+}
+
+footer {
+  min-width: 750px;
+  display: flex;
+  justify-content: space-between;
 }
 
 input {
@@ -70,7 +93,8 @@ input {
 .description-and-controls {
   width: 100%;
   height: 100%;
-  margin-top: 5%;
+  margin-top: 4%;
+  margin-bottom: 5px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -187,7 +211,10 @@ label div div::after {
 
 /* Адаптация */
 
-@media (max-width: 786px) {
+/* Сдвиг управляющих кнопок с небольшим уменьшением картинок, чтобы влез footer*/
+
+@media (max-width: 786px), (max-height: 925px) {
+
   .container {
     min-width: calc(var(--img-width) + 6px);
   }
@@ -200,20 +227,90 @@ label div div::after {
   .description {
     margin: 20px;
   }
+
+  .container {
+    min-width: calc(var(--img-width-480) + 6px);
+  }
+
+  footer {
+    min-width: calc(var(--img-width-480) + 6px);
+  }
+
+  p {
+    font-size: 15px;
+  }
+
+  .description {
+    margin-bottom: 2px;
+  }
+
+  .img-slider {
+    width: var(--img-width-480);
+    height: 638px;
+  }
+
+  .img-slider img {
+    width: var(--img-width-480);
+    height: 638px;
+  }
+
+  #button-01:checked~.img-slider :first-child {
+    margin-left: 0px;
+  }
+  
+  #button-02:checked~.img-slider :first-child {
+    margin-left: calc(-1 * var(--img-width-480));
+  }
+  
+  #button-03:checked~.img-slider :first-child {
+    margin-left: calc(-2 * var(--img-width-480));
+  }
+  
+  #button-04:checked~.img-slider :first-child {
+    margin-left: calc(-3 * var(--img-width-480));
+  }
+  
+  #button-05:checked~.img-slider :first-child {
+    margin-left: calc(-4 * var(--img-width-480));
+  }
+  
+  #button-06:checked~.img-slider :first-child {
+    margin-left: calc(-5 * var(--img-width-480));
+  }
 }
 
-@media (max-width: 550px), (max-height: 830px), (max-width: 786px) and (max-height: 880px) {
+/* Уменьшение картинок */
+
+@media (max-width: 550px), (max-height: 886px) {
+
   .container {
     min-width: calc(var(--img-width-380) + 6px);
   }
 
+  body {
+    margin: 5px 2.5% 5px 1.5%;
+  }
+
+  footer {
+    min-width: calc(var(--img-width-380) + 6px);
+    flex-direction: column;
+  }
+
+  h1 {
+    margin: 0px 0px 10px 0px;
+  }
+
+  .description {
+    margin-top: 10px;
+  }
+
   .img-slider {
-    width: 380px;
+    width: var(--img-width-380);
     height: 505px;
   }
 
   .img-slider img {
-    width: 380px;
+    width: var(--img-width-380);
     height: 505px;
   }
 
