@@ -16,32 +16,83 @@
 <body>
   <div class="container">
 
+    <header>
+      <h1>CSS MemSlider</h1>
+    </header>
+
+    <input type="radio" id="button-01" name="controls" value="img-01" checked>
+    <input type="radio" id="button-02" name="controls" value="img-02">
+    <input type="radio" id="button-03" name="controls" value="img-03">
+    <input type="radio" id="button-04" name="controls" value="img-04">
+    <input type="radio" id="button-05" name="controls" value="img-05">
+    <input type="radio" id="button-06" name="controls" value="img-06">
+
     <div class="img-slider">
       <img src="img/01.jpg" alt="img-01" width="524" height="697">
+      <img src="img/02.jpg" alt="img-02" width="524" height="697">
+      <img src="img/03.jpg" alt="img-03" width="524" height="697">
+      <img src="img/04.jpg" alt="img-04" width="524" height="697">
+      <img src="img/05.jpg" alt="img-05" width="524" height="697">
+      <img src="img/06.jpg" alt="img-06" width="524" height="697">
     </div>
 
     <div class="description-and-controls">
 
       <div class="description">
         <p>Сидел, изучал JavaScript</p>
+        <p>Работал инженером в фирме</p>
+        <p>Работал инженером на заводе</p>
+        <p>Работал слесарем на заводе</p>
+        <p>Сдавал зачеты в институте</p>
+        <p>Да нет, чем дальше - тем лучше</p>
       </div>
 
       <div class="controls">
-        <input type="radio" id="button-01" name="controls" value="img-01" checked>
-        <label for="button-01"></label>
-        <input type="radio" id="button-02" name="controls" value="img-02">
-        <label for="button-02"></label>
-        <input type="radio" id="button-03" name="controls" value="img-03">
-        <label for="button-03"></label>
-        <input type="radio" id="button-04" name="controls" value="img-04">
-        <label for="button-04"></label>
-        <input type="radio" id="button-05" name="controls" value="img-05">
-        <label for="button-05"></label>
-        <input type="radio" id="button-06" name="controls" value="img-06">
-        <label for="button-06"></label>
+        <label for="button-01">
+          <div>
+            <div id="radio-01"></div>
+          </div>
+        </label>
+        <label for="button-02">
+          <div>
+            <div id="radio-02"></div>
+          </div>
+        </label>
+        <label for="button-03">
+          <div>
+            <div id="radio-03"></div>
+          </div>
+        </label>
+        <label for="button-04">
+          <div>
+            <div id="radio-04"></div>
+          </div>
+        </label>
+        <label for="button-05">
+          <div>
+            <div id="radio-05"></div>
+          </div>
+        </label>
+        <label for="button-06">
+          <div>
+            <div id="radio-06"></div>
+          </div>
+        </label>
       </div>
 
     </div>
+
+    <footer>
+      <div>
+        <p>RS School Code Jam</p>
+        <p>Made in 48 h with Html and CSS only (no JavaScript)</p>
+      </div>
+      <div>
+        <p>Author: Ivan Zotov</p>
+        <p>October 2021</p>
+      </div>
+    </footer>
+
   </div>
 </body>
 
